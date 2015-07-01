@@ -1,9 +1,5 @@
 ---
 - include: fedora.yml
-  when: is_rhel7.rc != 0
-
-- include: rhel7.yml
-  when: is_rhel7.rc == 0
 
 - name: Determine if etcd-0.4 or newer
   command: rpm -q etcd
